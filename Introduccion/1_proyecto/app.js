@@ -21,3 +21,9 @@ var persona = {
     peso: 50
 };
 console.log(persona);
+var p1 = {
+    nombre: "fer",
+    apellido: "garcia",
+    edad: 20
+};
+console.log(p1.nombre);

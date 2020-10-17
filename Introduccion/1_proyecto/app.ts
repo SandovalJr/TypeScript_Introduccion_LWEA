@@ -27,3 +27,17 @@ var persona = {
 }
 console.log(persona);
 
+// Interfaces
+interface personaInterface {
+    nombre:string,
+    apellido:string,
+    edad:number,
+}
+
+var p1:personaInterface= {
+    nombre:"fer",
+    apellido: "garcia",
+    edad:20
+}
+ 
+console.log(p1.nombre);
