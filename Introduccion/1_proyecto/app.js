@@ -15,8 +15,8 @@ var b1 = false;
 var b2 = true;
 // OBJETOS
 var persona = {
-    nombre: 'fernanda',
-    apellido: 'Garcia',
+    nombre: "fernanda",
+    apellido: "Garcia",
     edad: 16,
     peso: 50
 };
@@ -27,3 +27,19 @@ var p1 = {
     edad: 20
 };
 console.log(p1.nombre);
+// SWITCH
+var cantidad = 25;
+// debugger
+switch (cantidad) {
+    case 10:
+        console.log("cantidad es 10");
+        break;
+    case 25:
+        console.log("cantidad es 25");
+        break;
+}
+// IF TERNARIOS
+var nombre;
+var edad = 18;
+nombre = edad > 10 ? "lalo" : "No se cumplo";
+console.log(nombre);
