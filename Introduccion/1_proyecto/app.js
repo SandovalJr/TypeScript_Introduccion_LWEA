@@ -10,3 +10,14 @@ console.log(edad + puntos);
 // TEXTOS
 var nombre = "SANDOVAL";
 console.log(nombre);
+// BOOLEAN
+var b1 = false;
+var b2 = true;
+// OBJETOS
+var persona = {
+    nombre: 'fernanda',
+    apellido: 'Garcia',
+    edad: 16,
+    peso: 50
+};
+console.log(persona);
