@@ -8,5 +8,8 @@ console.clear();
 // NUMEROS
 var edad: number = 13;
 var puntos: number = 15;
-
 console.log(edad + puntos);
+
+// TEXTOS
+var nombre:string = "SANDOVAL";
+console.log(nombre);

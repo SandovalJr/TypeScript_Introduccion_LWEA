@@ -7,3 +7,6 @@ console.clear();
 var edad = 13;
 var puntos = 15;
 console.log(edad + puntos);
+// TEXTOS
+var nombre = "SANDOVAL";
+console.log(nombre);
