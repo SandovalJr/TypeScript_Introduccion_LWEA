@@ -53,14 +53,37 @@ switch (cantidad) {
   case 25:
     console.log("cantidad es 25");
     break;
-
 }
 
 // IF TERNARIOS
-var nombre:string;
-var edad:number = 18;
-
-nombre = edad > 10 ? "lalo" : "No se cumplo" 
-
+var nombre: string;
+var edad: number = 18;
+nombre = edad > 10 ? "lalo" : "No se cumplo";
 console.log(nombre);
+
+// CICLOS
+interface Usuario {
+  nombre: string;
+  apellido: string;
+}
+
+var listadoUsuarios: Array<Usuario> = [
+  {
+    nombre: "ana",
+    apellido: "sandoval",
+  },
+  {
+      nombre: "lalo",
+      apellido: "sandoval"
+  },{
+      nombre:"fern",
+      apellido:"garcia"
+  }
+];
+
+// for of
+for (let usuario of listadoUsuarios) {
+console.log(usuario.nombre);
+}
+
 

@@ -43,3 +43,22 @@ var nombre;
 var edad = 18;
 nombre = edad > 10 ? "lalo" : "No se cumplo";
 console.log(nombre);
+var listadoUsuarios = [
+    {
+        nombre: "ana",
+        apellido: "sandoval"
+    },
+    {
+        nombre: "lalo",
+        apellido: "sandoval"
+    }, {
+        nombre: "fern",
+        apellido: "garcia"
+    }
+];
+// for of
+for (var _i = 0, listadoUsuarios_1 = listadoUsuarios; _i < listadoUsuarios_1.length; _i++) {
+    var usuario = listadoUsuarios_1[_i];
+    console.log(usuario.nombre);
+}
+// for in
