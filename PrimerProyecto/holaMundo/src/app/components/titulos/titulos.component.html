@@ -1,4 +1,22 @@
-<h1>{{titulo}}</h1>
+<!-- <h1>{{titulo}}</h1>
 
+<!-- INTERPOLACION-->
+<!-- <p> yo soy el alumno {{alumno.nombre}}, {{alumno.apellido}}</p> -->
 
-<p> yo soy el alumno {{alumno.nombre}}, {{alumno.apellido}}</p>
+<!-- Property binding son los [ ]-->
+<!-- <img [src]="imagen" alt="">
+
+<input type="text" [(ngModel)]="inputN">
+<p>{{inputN}}</p> --> -->
+
+<h1>log in fake</h1>
+<label for="">
+  Password
+  <input type="text" [(ngModel)]="correo">
+</label>
+<label for="">
+  Contraseña
+  <input type="password" [(ngModel)]= "password">
+</label>
+<br>
+<button (click)="ingresar()">Iniciar</button>
