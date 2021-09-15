@@ -12,11 +12,16 @@
 <h1>log in fake</h1>
 <label for="">
   Password
-  <input type="text" [(ngModel)]="correo">
+  <input type="text"  (ngModelChange)= "EscribirCorreo()"  [(ngModel)]="correo">
 </label>
 <label for="">
   Contraseña
-  <input type="password" [(ngModel)]= "password">
+  <input type="password" (ngModelChange)= "EscribirModelo()" [(ngModel)]= "password">
 </label>
 <br>
-<button (click)="ingresar()">Iniciar</button>
+<button (dblclick)="ingresar()">Iniciar</button>
+<button (dblclick)="llamarAlert()">Dos click</button>
+
+<br>
+<br>
+<input type="text" (input)="escribir($event)">

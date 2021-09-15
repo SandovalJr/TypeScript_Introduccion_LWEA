@@ -28,5 +28,23 @@ export class TitulosComponent implements OnInit {
     console.log(this.correo + ' BIENVENIDO');
   }
 
+llamarAlert(){
+  alert('Presionaste doble click')
+}
+
+EscribirModelo(){
+console.log(this.password);
+}
+
+EscribirCorreo(){
+  this.password = this.correo
+ console.log(this.correo);
+ console.log(this.password);
+
+}
+
+escribir(evento){
+  console.log(evento.target.value);
+}
 
 }
