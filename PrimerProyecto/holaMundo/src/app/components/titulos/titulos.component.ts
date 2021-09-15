@@ -47,4 +47,10 @@ escribir(evento){
   console.log(evento.target.value);
 }
 
+// focus nos sirve para realizar una accion cuando nosotros ingresamos a un elemento
+colorearfondo(evento){
+  evento.srcElement.style.background = 'red'
+  evento.srcElement.style.width =  "500px"
+}
+
 }
