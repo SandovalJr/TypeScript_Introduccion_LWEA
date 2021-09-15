@@ -3,26 +3,35 @@
 <!-- INTERPOLACION-->
 <!-- <p> yo soy el alumno {{alumno.nombre}}, {{alumno.apellido}}</p> -->
 
-<!-- Property binding son los [ ]-->
+Property binding son los [ ]-->
 <!-- <img [src]="imagen" alt="">
 
 <input type="text" [(ngModel)]="inputN">
-<p>{{inputN}}</p> --> -->
+<p>{{inputN}}</p> -->
 
 <h1>log in fake</h1>
+
+<img src="../../../assets/angular-logo.png" alt="" style="width: 300px">
+<br><br><br>
 <label for="">
   Password
   <input type="text"  (ngModelChange)= "EscribirCorreo()"  [(ngModel)]="correo">
 </label>
 <label for="">
   Contraseña
-  <input type="password" (ngModelChange)= "EscribirModelo()" [(ngModel)]= "password">
+  <input type="password" (ngModelChange)= "EscribirModelo()" (keydown)="ingresar($event)" [(ngModel)]= "password">
 </label>
 <br>
-<button (dblclick)="ingresar()">Iniciar</button>
+<!--  <button (dblclick)="ingresar()">Iniciar</button> -->
 <button (dblclick)="llamarAlert()">Dos click</button>
 
 <br>
 <br>
 <input type="text" (input)="escribir($event)">
+<br>
+<h4>focus</h4>
 <input type="text" (focus)="colorearfondo($event)">
+
+<img src="https://1757140519.rsc.cdn77.org/blog/wp-content/uploads/sites/4/2021/02/google-gif-logo.gif"
+  (mouseenter)="CambiarTamano($event)"
+  (mouseleave)="incrementartamano($event)">

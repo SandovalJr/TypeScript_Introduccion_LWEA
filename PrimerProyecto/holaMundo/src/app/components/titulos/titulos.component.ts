@@ -24,8 +24,13 @@ export class TitulosComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  ingresar() {
-    console.log(this.correo + ' BIENVENIDO');
+  ingresar(event) {
+    if(event.key == "Enter"){
+      console.log("ingresando a sistema");
+    } else {
+
+    }
+    //console.log(this.correo + ' BIENVENIDO');
   }
 
 llamarAlert(){
@@ -40,7 +45,6 @@ EscribirCorreo(){
   this.password = this.correo
  console.log(this.correo);
  console.log(this.password);
-
 }
 
 escribir(evento){
@@ -51,6 +55,15 @@ escribir(evento){
 colorearfondo(evento){
   evento.srcElement.style.background = 'red'
   evento.srcElement.style.width =  "500px"
+}
+
+CambiarTamano(event){
+  event.srcElement.style.width = "100px"
+  event.srcElement.style.border = "1px solid red"
+}
+incrementartamano(event){
+  event.srcElement.style.width = "500px"
+  event.srcElement.style.border = "1px solid blue"
 }
 
 }
