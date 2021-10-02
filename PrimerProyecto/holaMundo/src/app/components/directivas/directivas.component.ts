@@ -14,4 +14,14 @@ export class DirectivasComponent implements OnInit {
       this.loading = false;
     }, 5000);
   }
+
+  showLoading() {
+    //vas a ser el loading pero cambiaras el valor que tiene actualmente
+    this.loading = !this.loading;
+  }
+
+
+
+
+
 }
