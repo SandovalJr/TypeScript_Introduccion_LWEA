@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { TitulosComponent } from './components/titulos/titulos.component';
 
 import { FormsModule } from '@angular/forms';
-import { DirectivasComponent } from './components/directivas/directivas.component';
+import { DirectivasComponent } from "./components/directivas/DirectivasComponent";
 
 @NgModule({
   declarations: [AppComponent, TitulosComponent, DirectivasComponent],
