@@ -10,6 +10,8 @@ export class PipesComponent implements OnInit {
   dinero: number = 6500;
   porcentaje: number = 0.88;
   fecha: Date = new Date('1999-08-25');
+  textolargo: string =
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, magni expeditaLorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, magni expeditaLorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, magni expedita';
 
   constructor() {}
 
