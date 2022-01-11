@@ -7,9 +7,10 @@ import { TitulosComponent } from './components/titulos/titulos.component';
 import { FormsModule } from '@angular/forms';
 import { DirectivasComponent } from "./components/directivas/DirectivasComponent";
 import { Ejemplo1Component } from './components/ejemplo1/ejemplo1.component';
+import { PipesComponent } from './components/pipes/pipes.component';
 
 @NgModule({
-  declarations: [AppComponent, TitulosComponent, DirectivasComponent, Ejemplo1Component],
+  declarations: [AppComponent, TitulosComponent, DirectivasComponent, Ejemplo1Component, PipesComponent],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
