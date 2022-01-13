@@ -5,14 +5,23 @@ import { AppComponent } from './app.component';
 import { TitulosComponent } from './components/titulos/titulos.component';
 
 import { FormsModule } from '@angular/forms';
-import { DirectivasComponent } from "./components/directivas/DirectivasComponent";
+import { DirectivasComponent } from './components/directivas/DirectivasComponent';
 import { Ejemplo1Component } from './components/ejemplo1/ejemplo1.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { ContinuaraPipe } from './continuara.pipe';
 
+import { APP_ROUTES } from '../routes/routes';
+
 @NgModule({
-  declarations: [AppComponent, TitulosComponent, DirectivasComponent, Ejemplo1Component, PipesComponent, ContinuaraPipe],
-  imports: [BrowserModule, FormsModule],
+  declarations: [
+    AppComponent,
+    TitulosComponent,
+    DirectivasComponent,
+    Ejemplo1Component,
+    PipesComponent,
+    ContinuaraPipe,
+  ],
+  imports: [APP_ROUTES,BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
