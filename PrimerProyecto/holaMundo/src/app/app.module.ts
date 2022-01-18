@@ -10,7 +10,7 @@ import { Ejemplo1Component } from './components/ejemplo1/ejemplo1.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { ContinuaraPipe } from './continuara.pipe';
 
-import { APP_ROUTES } from '../routes/routes';
+import { APP_ROUTESS } from '../routes/routes';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { APP_ROUTES } from '../routes/routes';
     PipesComponent,
     ContinuaraPipe,
   ],
-  imports: [APP_ROUTES,BrowserModule, FormsModule],
+  imports: [APP_ROUTESS,BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

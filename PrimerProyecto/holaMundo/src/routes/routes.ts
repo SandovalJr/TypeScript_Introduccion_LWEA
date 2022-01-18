@@ -1,7 +1,8 @@
 import { RouterModule, Routes } from "@angular/router";
 import { Component } from "@angular/core";
-
-//IMPORTS COMPONENT
+///////////////////////////////////////
+//IMPORTS COMPONENT pppp
+//////////////////////////////////////
 
 import {DirectivasComponent} from '../app/components/directivas/DirectivasComponent'
 import {Ejemplo1Component} from '../app/components/ejemplo1/ejemplo1.component'
@@ -20,9 +21,9 @@ const routes: Routes = [{
 }
 ,
 {
-  path: "directivas", component: DirectivasComponent
+  path: "directivasss", component: DirectivasComponent
 }
-
+  
 ]
 
-export const APP_ROUTES = RouterModule.forRoot(routes);
+export const APP_ROUTESS = RouterModule.forRoot(routes);
