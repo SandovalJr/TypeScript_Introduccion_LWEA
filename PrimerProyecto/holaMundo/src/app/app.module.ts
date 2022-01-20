@@ -11,6 +11,7 @@ import { PipesComponent } from './components/pipes/pipes.component';
 import { ContinuaraPipe } from './continuara.pipe';
 
 import { APP_ROUTESS } from '../routes/routes';
+import { Error404Component } from './components/error404/error404.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { APP_ROUTESS } from '../routes/routes';
     Ejemplo1Component,
     PipesComponent,
     ContinuaraPipe,
+    Error404Component,
   ],
   imports: [APP_ROUTESS,BrowserModule, FormsModule],
   providers: [],
