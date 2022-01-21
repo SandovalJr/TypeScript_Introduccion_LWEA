@@ -12,6 +12,7 @@ import { ContinuaraPipe } from './continuara.pipe';
 
 import { APP_ROUTESS } from '../routes/routes';
 import { Error404Component } from './components/error404/error404.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { Error404Component } from './components/error404/error404.component';
     PipesComponent,
     ContinuaraPipe,
     Error404Component,
+    NavbarComponent,
   ],
   imports: [APP_ROUTESS,BrowserModule, FormsModule],
   providers: [],
