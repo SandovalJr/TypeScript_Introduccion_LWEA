@@ -13,6 +13,9 @@ import { ContinuaraPipe } from './continuara.pipe';
 import { APP_ROUTESS } from '../routes/routes';
 import { Error404Component } from './components/error404/error404.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { UsuariosComponent } from './components/usuarios/usuarios.component';
+import { AgregarUsuariosComponent } from './components/usuarios/agregar-usuarios/agregar-usuarios.component';
+import { EditarUsuariosComponent } from './components/usuarios/editar-usuarios/editar-usuarios.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     ContinuaraPipe,
     Error404Component,
     NavbarComponent,
+    UsuariosComponent,
+    AgregarUsuariosComponent,
+    EditarUsuariosComponent,
   ],
   imports: [APP_ROUTESS,BrowserModule, FormsModule],
   providers: [],
