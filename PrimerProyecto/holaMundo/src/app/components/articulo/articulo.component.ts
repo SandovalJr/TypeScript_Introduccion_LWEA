@@ -12,27 +12,27 @@ interface articulo {
   styleUrls: ['./articulo.component.scss'],
 })
 export class ArticuloComponent implements OnInit {
-  articulos: Array<articulo> = new Array<articulo>();
+  Articulos: Array<articulo> = new Array<articulo>();
 
   constructor() {}
 
   ngOnInit(): void {
-    this.articulos.push({
-      nombre: 'televisor',
-      description: '4K Marca Dell con 4 anios de garantia',
-      precio: 45000,
-    },
-    {
-      nombre: 'OMEN LAPTOP',
-      description: '4K Marca HP con 4 anios de garantia',
-      precio: 45000,
-    },{
-      nombre: 'ALIEN WARE',
-      description: '4K Marca Dell con 4 anios de garantia',
-      precio: 45000,
-    },
-
-
+    this.Articulos.push(
+      {
+        nombre: 'televisor',
+        description: '4K Marca Dell con 4 anios de garantia',
+        precio: 45000,
+      },
+      {
+        nombre: 'OMEN LAPTOP',
+        description: '4K Marca HP con 4 anios de garantia',
+        precio: 45000,
+      },
+      {
+        nombre: 'ALIEN WARE',
+        description: '4K Marca Dell con 4 anios de garantia',
+        precio: 45000,
+      }
     );
   }
 }

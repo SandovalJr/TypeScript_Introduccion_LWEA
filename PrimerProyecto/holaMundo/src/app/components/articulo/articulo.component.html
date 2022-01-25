@@ -1,7 +1,7 @@
 <div class="container">
-  <div class="articulos">
-    <h4>Nombre:</h4>
-    <p>Descripcion:</p>
-    <h4>Precio:</h4>
+  <div class="articulos" *ngFor="let art of Articulos">
+    <h4>Nombre: {{ art.nombre }}</h4>
+    <p>Descripcion: {{ art.description }}</p>
+    <h4>Precio: {{ art.precio }}</h4>
   </div>
 </div>
