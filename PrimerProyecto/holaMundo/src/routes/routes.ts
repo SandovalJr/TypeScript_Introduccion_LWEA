@@ -53,6 +53,9 @@ const routes: Routes = [
     ],
   },
   {
+    path: 'articulos', component: ArticuloComponent
+  },
+  {
     path: '**',
     component: Error404Component,
   },
