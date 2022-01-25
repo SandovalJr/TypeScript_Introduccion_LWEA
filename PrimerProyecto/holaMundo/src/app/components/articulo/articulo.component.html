@@ -1,6 +1,8 @@
 <div class="container">
-  <div class="articulos" *ngFor="let art of Articulos">
-    <h4>Nombre: {{ art.nombre }}</h4>
+  <div class="articulos mt-3 text-center" *ngFor="let art of Articulos">
+    <h4>
+      Nombre: <a [routerLink]="['/articuloDetalle', art.nombre]" > {{art.nombre}}</a>
+    </h4>
     <p>Descripcion: {{ art.description }}</p>
     <h4>Precio: {{ art.precio }}</h4>
   </div>
