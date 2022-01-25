@@ -16,6 +16,11 @@ import { AgregarUsuariosComponent } from '../app/components/usuarios/agregar-usu
 import { UsuariosComponent } from '../app/components/usuarios/usuarios.component';
 import { EditarUsuariosComponent } from '../app/components/usuarios/editar-usuarios/editar-usuarios.component';
 
+
+//Articulos
+import {ArticuloComponent} from '../app/components/articulo/articulo.component'
+import {ArticuloDetallesComponent} from '../app/components/articulo-detalles/articulo-detalles.component'
+
 const routes: Routes = [
   {
     path: '',

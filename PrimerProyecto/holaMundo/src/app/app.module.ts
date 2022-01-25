@@ -16,6 +16,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { AgregarUsuariosComponent } from './components/usuarios/agregar-usuarios/agregar-usuarios.component';
 import { EditarUsuariosComponent } from './components/usuarios/editar-usuarios/editar-usuarios.component';
+import { ArticuloComponent } from './components/articulo/articulo.component';
+import { ArticuloDetallesComponent } from './components/articulo-detalles/articulo-detalles.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { EditarUsuariosComponent } from './components/usuarios/editar-usuarios/e
     UsuariosComponent,
     AgregarUsuariosComponent,
     EditarUsuariosComponent,
+    ArticuloComponent,
+    ArticuloDetallesComponent,
   ],
   imports: [APP_ROUTESS,BrowserModule, FormsModule],
   providers: [],
