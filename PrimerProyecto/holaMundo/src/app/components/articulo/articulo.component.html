@@ -1,7 +1,7 @@
 <div class="container">
   <div class="articulos mt-3 text-center" *ngFor="let art of Articulos">
     <h4 class="tituloart">
-      Nombre: <a [routerLink]="['/articuloDetalle', art.nombre]" > {{art.nombre}}</a>
+      Nombre: <a [routerLink]="['/articuloDetalle', art.nombre, art.precio]" > {{art.nombre}}</a>
     </h4>
     <p>Descripcion: {{ art.description }}</p>
     <h4>Precio: {{ art.precio }}</h4>
