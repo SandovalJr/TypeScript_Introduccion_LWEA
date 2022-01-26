@@ -16,7 +16,8 @@ export class ArticuloDetallesComponent implements OnInit {
     // console.log(this.ruta.snapshot.params.nombre);
     // this.nombre_recibido = this.ruta.snapshot.params.nombre;
     // this.price_recibido= this.ruta.snapshot.params.price;
-    // this.art = this.ruta.snapshot.params.articulo;
-    console.log(this.ruta.snapshot.params.articulo);
+    // this.art = this.ruta.snapshot.params.articulo;)
+    this.art = JSON.parse(this.ruta.snapshot.params.articulo_enviado);
+    console.log(JSON.parse(this.ruta.snapshot.params.articulo_enviado));
   }
 }

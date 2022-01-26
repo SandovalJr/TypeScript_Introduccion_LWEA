@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { articulo } from '../../models/articulo.interface';
 
 @Component({
@@ -9,7 +10,7 @@ import { articulo } from '../../models/articulo.interface';
 export class ArticuloComponent implements OnInit {
   Articulos: Array<articulo> = new Array<articulo>();
 
-  constructor() {}
+  constructor(private rutaArt: Router) {}
 
   ngOnInit(): void {
     this.Articulos.push(
@@ -39,7 +40,11 @@ export class ArticuloComponent implements OnInit {
     );
   }
 
-  pasarParametro(articulo: articulo) {
-    console.log(articulo);
+  pasarParametro(Articulo_recibido: articulo) {
+    console.log(Articulo_recibido);
+    this.rutaArt.navigate([
+      'articuloDetalle',
+      { articulo_enviado: JSON.stringify(Articulo_recibido) },
+    ]);
   }
 }

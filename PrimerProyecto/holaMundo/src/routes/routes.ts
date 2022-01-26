@@ -56,7 +56,8 @@ const routes: Routes = [
     component: ArticuloComponent,
   },
   // { path: 'articuloDetalle/:nombre/:price', component: ArticuloDetallesComponent },
-  { path: 'articuloDetalle/:articulo', component: ArticuloDetallesComponent },
+  // { path: 'articuloDetalle/:articulo', component: ArticuloDetallesComponent },
+  { path: 'articuloDetalle', component: ArticuloDetallesComponent },
   {
     path: '**',
     component: Error404Component,
