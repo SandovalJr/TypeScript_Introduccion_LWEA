@@ -3,6 +3,9 @@
     <h4 class="tituloart">
       Nombre: <a [routerLink]="['/articuloDetalle', art.nombre, art.precio]" > {{art.nombre}}</a>
     </h4>
+    <h4 class="tituloart">
+      Nombre: <a (click)="pasarParametro(art)" > {{art.nombre}}</a>
+    </h4>
     <p>Descripcion: {{ art.description }}</p>
     <h4>Precio: {{ art.precio }}</h4>
   </div>
