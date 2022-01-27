@@ -3,14 +3,23 @@
     <div class="form-group">
       <label for="">Nombre</label>
       <input type="text" name="nombre" class="form-control" />
+      <div class="alert alert-danger" role="alert">El nombre es requerido</div>
     </div>
     <div class="form-group">
       <label for="">Correo</label>
       <input type="text" name="correo" class="form-control" />
+      <div class="alert alert-danger" role="alert">El correo es requerido</div>
+      <div class="alert alert-danger" role="alert">
+        Ingresa un correo valido
+      </div>
     </div>
     <div class="form-group">
       <label for="">Password</label>
       <input type="text" name="password" class="form-control" />
+      <div class="alert alert-danger" role="alert">Password is required</div>
+      <div class="alert alert-danger" role="alert">
+        Password debe tener minimo 8 caracteres
+      </div>
     </div>
 
     <button class="btn btn-primary mt-2">Agregar</button>
