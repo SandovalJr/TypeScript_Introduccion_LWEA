@@ -1,15 +1,23 @@
-
-<!-- prueba git clone works -->
 <div class="container mt-5">
-  <form action="">
+  <form [formGroup]="formularioCreado">
     <div class="form-group">
       <label for="">Nombre</label>
-      <input type="text" name="nombre" class="form-control" />
+      <input
+        type="text"
+        name="nombre"
+        class="form-control"
+        formControlName="nombre"
+      />
       <div class="alert alert-danger" role="alert">El nombre es requerido</div>
     </div>
     <div class="form-group">
       <label for="">Correo</label>
-      <input type="text" name="correo" class="form-control" />
+      <input
+        type="text"
+        name="correo"
+        class="form-control"
+        formControlName="correo"
+      />
       <div class="alert alert-danger" role="alert">El correo es requerido</div>
       <div class="alert alert-danger" role="alert">
         Ingresa un correo valido
@@ -17,7 +25,12 @@
     </div>
     <div class="form-group">
       <label for="">Password</label>
-      <input type="text" name="password" class="form-control" />
+      <input
+        type="text"
+        name="password"
+        class="form-control"
+        formControlName="password"
+      />
       <div class="alert alert-danger" role="alert">Password is required</div>
       <div class="alert alert-danger" role="alert">
         Password debe tener minimo 8 caracteres

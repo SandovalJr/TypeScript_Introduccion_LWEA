@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-formulario',
@@ -7,7 +7,22 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./formulario.component.sass'],
 })
 export class FormularioComponent implements OnInit {
+  formularioCreado!: FormGroup;
+
   constructor(private formBuilder: FormBuilder) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.crearFormulario();
+  }
+
+  crearFormulario() {
+    this.formularioCreado = this.formBuilder.group({
+      nombre: ['Carmen', Validators.required],
+      correo: ['', Validators.compose([Validators.required, Validators.email])],
+      password: [
+        '',
+        Validators.compose([Validators.required, Validators.minLength(8)]),
+      ],
+    });
+  }
 }
