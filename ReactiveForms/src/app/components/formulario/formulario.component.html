@@ -8,20 +8,56 @@
         class="form-control"
         formControlName="nombre"
       />
-      <div class="alert alert-danger" role="alert">El nombre es requerido</div>
+      <div
+        *ngIf="
+          formularioCreado.controls['nombre'].invalid &&
+          formularioCreado.controls['nombre'].dirty
+        "
+        class="alert alert-danger"
+        role="alert"
+      >
+        <span *ngIf="formularioCreado.controls['nombre'].errors">
+          El nombre es requerido</span
+        >
+      </div>
     </div>
+    <!-- dirty es para cuando nosotros empezamos a escribir un input -->
+    <!-- {{formularioCreado.controls["nombre"].dirty}} -->
+
     <div class="form-group">
       <label for="">Correo</label>
       <input
         type="text"
-        name="correo"
+        name="email"
         class="form-control"
-        formControlName="correo"
+        formControlName="email"
       />
-      <div class="alert alert-danger" role="alert">El correo es requerido</div>
-      <div class="alert alert-danger" role="alert">
-        Ingresa un correo valido
+
+      <!-- ss -->
+      <div
+        *ngIf="
+          formularioCreado.controls['email'].invalid &&
+          formularioCreado.controls['email'].dirty
+        "
+      >
+        <div
+          class="alert alert-danger"
+          role="alert"
+          *ngIf="formularioCreado.controls['email'].errors"
+        >
+          El email es requerido
+        </div>
+        <!--  -->
+        <div
+          class="alert alert-danger"
+          role="alert"
+          *ngIf="formularioCreado.controls['email'].errors"
+        >
+          Ingresa un email valido
+        </div>
       </div>
+      <!-- ss -->
+
     </div>
     <div class="form-group">
       <label for="">Password</label>
@@ -37,6 +73,18 @@
       </div>
     </div>
 
-    <button class="btn btn-primary mt-2">Agregar</button>
+    <button
+      [disabled]="!formularioCreado.valid"
+      class="btn btn-primary mt-2"
+      (click)="agregar()"
+    >
+      Agregar
+    </button>
   </form>
 </div>
+<br />
+
+<p>Es valido: {{ formularioCreado.valid }}</p>
+<p>
+  {{ formularioCreado.value | json }}
+</p>
