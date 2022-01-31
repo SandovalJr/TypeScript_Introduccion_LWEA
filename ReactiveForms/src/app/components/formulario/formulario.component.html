@@ -57,7 +57,6 @@
         </div>
       </div>
       <!-- ss -->
-
     </div>
     <div class="form-group">
       <label for="">Password</label>
@@ -67,8 +66,18 @@
         class="form-control"
         formControlName="password"
       />
-      <div class="alert alert-danger" role="alert">Password is required</div>
-      <div class="alert alert-danger" role="alert">
+      <div
+        *ngIf="formularioCreado.controls['password'].errors?.required"
+        class="alert alert-danger"
+        role="alert"
+      >
+        Password is required
+      </div>
+      <div
+        *ngIf="formularioCreado.controls['password'].errors?.minlength"
+        class="alert alert-danger"
+        role="alert"
+      >
         Password debe tener minimo 8 caracteres
       </div>
     </div>
@@ -88,3 +97,11 @@
 <p>
   {{ formularioCreado.value | json }}
 </p>
+
+<div>
+  <h4 *ngFor="let usuario of usuarios">
+    <p>{{ usuario.nombre }}</p>
+    <p>{{ usuario.email }}</p>
+    <p>{{ usuario.password }}</p>
+  </h4>
+</div>
