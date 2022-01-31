@@ -16,7 +16,7 @@ export class FormularioComponent implements OnInit {
 
   constructor(private fb: FormBuilder) {
     this.formularioCreado = this.fb.group({
-      nombre: ['', Validators.required],
+      nombre: ['Carmen', Validators.required],
       email: ['', Validators.compose([Validators.required, Validators.email])],
       password: [
         '',

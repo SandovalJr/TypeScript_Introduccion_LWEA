@@ -16,7 +16,7 @@
         class="alert alert-danger"
         role="alert"
       >
-        <span *ngIf="formularioCreado.controls['nombre'].errors">
+        <span *ngIf="formularioCreado.controls['nombre'].errors?.required">
           El nombre es requerido</span
         >
       </div>
@@ -43,7 +43,7 @@
         <div
           class="alert alert-danger"
           role="alert"
-          *ngIf="formularioCreado.controls['email'].errors"
+          *ngIf="formularioCreado.controls['email'].errors?.required"
         >
           El email es requerido
         </div>
@@ -51,7 +51,7 @@
         <div
           class="alert alert-danger"
           role="alert"
-          *ngIf="formularioCreado.controls['email'].errors"
+          *ngIf="formularioCreado.controls['email'].errors?.email"
         >
           Ingresa un email valido
         </div>
