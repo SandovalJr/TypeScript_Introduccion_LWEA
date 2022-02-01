@@ -93,7 +93,7 @@
     <button
       *ngIf="!esNuevo"
       [disabled]="!formularioCreado.valid"
-      class="btn btn-danger mt-2"
+      class="btn btn-warning mt-2"
       (click)="editar()"
     >
       Editar
@@ -107,13 +107,14 @@
   {{ formularioCreado.value | json }}
 </p>
 
-<div>
+<div class="container text-center">
   <h4 *ngFor="let usuario of usuarios; let pos = index">
     <p>{{ usuario.nombre }} Posicion: {{ pos }}</p>
     <p>{{ usuario.email }}</p>
     <p>{{ usuario.password }}</p>
-    <button class="btn btn-danger mt-2" (click)="editarUsuario(pos)">
+    <button class="btn btn-warning mt-2" (click)="editarUsuario(pos)">
       Editar
     </button>
+    <button class="btn btn-danger" (click)="eliminar(pos)">Eliminar</button>
   </h4>
 </div>

@@ -65,4 +65,8 @@ export class FormularioComponent implements OnInit {
     this.esNuevo = true;
     this.posEdit = -1;
   }
+
+  eliminar(posicion: number) {
+    this.usuarios.splice(posicion, 1);
+  }
 }
