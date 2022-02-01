@@ -19,6 +19,7 @@ interface usuario {
 })
 export class FormularioComponent implements OnInit {
   formularioCreado: FormGroup;
+  esNuevo: boolean = true;
   usuarios: Array<usuario> = new Array<usuario>();
 
   constructor(private fb: FormBuilder) {
@@ -39,5 +40,18 @@ export class FormularioComponent implements OnInit {
     this.usuarios.push(this.formularioCreado.value as usuario);
     //borrar los campos anteriores para que el nuevo usuario se pueda registrar
     this.formularioCreado.reset();
+  }
+
+  editarUsuario(pos: number) {
+    // this.usuarios[pos].nombre = 'A';
+    // this.usuarios[pos].email = 'prueba@gmail.com';
+    // this.usuarios[pos].password = 'sandoval1234';
+
+    this.formularioCreado.setValue({
+      nombre: this.usuarios[pos].nombre,
+      email: this.usuarios[pos].email,
+      password: this.usuarios[pos].password,
+    });
+    this.esNuevo = false;
   }
 }

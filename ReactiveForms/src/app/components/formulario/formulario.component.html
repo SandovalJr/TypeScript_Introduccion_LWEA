@@ -83,11 +83,19 @@
     </div>
 
     <button
+      *ngIf="esNuevo"
       [disabled]="!formularioCreado.valid"
       class="btn btn-primary mt-2"
       (click)="agregar()"
     >
       Agregar
+    </button>
+    <button
+      *ngIf="!esNuevo"
+      [disabled]="!formularioCreado.valid"
+      class="btn btn-danger mt-2"
+    >
+      Editar
     </button>
   </form>
 </div>
@@ -99,9 +107,15 @@
 </p>
 
 <div>
-  <h4 *ngFor="let usuario of usuarios">
-    <p>{{ usuario.nombre }}</p>
+  <h4 *ngFor="let usuario of usuarios; let pos = index">
+    <p>{{ usuario.nombre }} Posicion: {{ pos }}</p>
     <p>{{ usuario.email }}</p>
     <p>{{ usuario.password }}</p>
+    <button
+      class="btn btn-danger mt-2"
+      (click)="editarUsuario(pos)"
+    >
+      Editar
+    </button>
   </h4>
 </div>
