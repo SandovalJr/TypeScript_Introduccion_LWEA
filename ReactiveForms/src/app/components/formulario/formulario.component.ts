@@ -20,6 +20,7 @@ interface usuario {
 export class FormularioComponent implements OnInit {
   formularioCreado: FormGroup;
   esNuevo: boolean = true;
+  posEdit: number = -1;
   usuarios: Array<usuario> = new Array<usuario>();
 
   constructor(private fb: FormBuilder) {
@@ -52,6 +53,16 @@ export class FormularioComponent implements OnInit {
       email: this.usuarios[pos].email,
       password: this.usuarios[pos].password,
     });
+    this.posEdit = pos;
     this.esNuevo = false;
+  }
+
+  editar() {
+    this.usuarios[this.posEdit].nombre = this.formularioCreado.value.nombre;
+    this.usuarios[this.posEdit].email = this.formularioCreado.value.email;
+    this.usuarios[this.posEdit].password = this.formularioCreado.value.password;
+    this.formularioCreado.reset();
+    this.esNuevo = true;
+    this.posEdit = -1;
   }
 }

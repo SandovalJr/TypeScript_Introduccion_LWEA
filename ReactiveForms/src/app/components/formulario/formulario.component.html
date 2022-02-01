@@ -94,6 +94,7 @@
       *ngIf="!esNuevo"
       [disabled]="!formularioCreado.valid"
       class="btn btn-danger mt-2"
+      (click)="editar()"
     >
       Editar
     </button>
@@ -111,10 +112,7 @@
     <p>{{ usuario.nombre }} Posicion: {{ pos }}</p>
     <p>{{ usuario.email }}</p>
     <p>{{ usuario.password }}</p>
-    <button
-      class="btn btn-danger mt-2"
-      (click)="editarUsuario(pos)"
-    >
+    <button class="btn btn-danger mt-2" (click)="editarUsuario(pos)">
       Editar
     </button>
   </h4>
