@@ -1,7 +1,7 @@
 <div class="container">
   <div class="perfil text-center">
-    <h1>Nombre:  </h1>
-    <h2>Apellido:</h2>
+    <h1>Nombre: {{ usuarioInyectado.usuario.nombre }}</h1>
+    <h2>Apellido: {{ usuarioInyectado.usuario.apellido }}</h2>
 
     <button class="btn btn-outline-warning" (click)="cambiarNombre()">
       Change Name

@@ -7,7 +7,7 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
   styleUrls: ['./perfil.component.sass'],
 })
 export class PerfilComponent implements OnInit {
-  constructor(private usuarioInyectado: UsuariosService) {
+  constructor(public usuarioInyectado: UsuariosService) {
     console.log(this.usuarioInyectado.usuario.nombre);
   }
 
