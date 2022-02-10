@@ -7,7 +7,9 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
   styleUrls: ['./perfil.component.sass'],
 })
 export class PerfilComponent implements OnInit {
-  constructor(usuarioInyectado: UsuariosService) {}
+  constructor( private UsuariosService: UsuariosService) {
+    // this.UsuariosService.usuario.nombre = 'juan'
+  }
 
   ngOnInit(): void {}
 

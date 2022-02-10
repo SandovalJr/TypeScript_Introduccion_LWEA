@@ -7,7 +7,7 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
   styleUrls: ['./encabezado.component.sass'],
 })
 export class EncabezadoComponent implements OnInit {
-  constructor(usuarioInyectado: UsuariosService) {}
+  constructor( private usuarioInyectado: UsuariosService) {}
 
   ngOnInit(): void {
   }
