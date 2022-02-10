@@ -6,10 +6,7 @@ import { Usuario } from '../models/usuario';
   providedIn: 'root',
 })
 export class UsuariosService {
-  usuario: Usuario = new Usuario(1, "elias", "sandoval", "123454");
+  usuario: Usuario = new Usuario(1, 'elias', 'sandoval', '123454');
 
-  constructor() {
-   
-  }
-  
+  constructor() {}
 }

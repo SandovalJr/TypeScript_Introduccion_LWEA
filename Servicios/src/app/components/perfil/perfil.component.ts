@@ -7,13 +7,13 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
   styleUrls: ['./perfil.component.sass'],
 })
 export class PerfilComponent implements OnInit {
-  constructor( private UsuariosService: UsuariosService) {
-    // this.UsuariosService.usuario.nombre = 'juan'
+  constructor(private usuarioInyectado: UsuariosService) {
+    console.log(this.usuarioInyectado.usuario.nombre);
   }
 
   ngOnInit(): void {}
 
   cambiarNombre() {
-    // this.usuarioInyectado.usuario.nombre;
+    this.usuarioInyectado.usuario.nombre = 'susana';
   }
 }
