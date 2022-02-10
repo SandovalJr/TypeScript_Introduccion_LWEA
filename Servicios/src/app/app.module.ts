@@ -7,9 +7,18 @@ import { AppComponent } from './app.component';
 import { UsuariosService } from './services/usuarios.service';
 import { HomeComponent } from './components/home/home.component';
 import { EncabezadoComponent } from './components/encabezado/encabezado.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
+
+//rutas
+import { APP_ROUTES } from './routes/routes';
 @NgModule({
-  declarations: [AppComponent, HomeComponent, EncabezadoComponent],
-  imports: [BrowserModule],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    EncabezadoComponent,
+    PerfilComponent,
+  ],
+  imports: [BrowserModule, APP_ROUTES],
   providers: [UsuariosService],
   bootstrap: [AppComponent],
 })
