@@ -1,9 +1,16 @@
 import { Injectable } from '@angular/core';
 
+import { Usuario } from '../models/usuario';
+
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UsuariosService {
+  usuario: Usuario = new Usuario();
 
-  constructor() { }
+  constructor() {
+    this.usuario.usuarioID = 1;
+    this.usuario.nombre = 'elias'
+    this.usuario.apellido = 'sandoval'
+  }
 }
