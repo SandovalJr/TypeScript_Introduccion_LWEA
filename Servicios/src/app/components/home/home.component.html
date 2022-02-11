@@ -1,7 +1,7 @@
 <div class="container">
-  <div class="articulo text-center">
-    <h4>Encabezado</h4>
-    <p>descripcion:</p>
-    <p>fecha</p>
+  <div class="articulo text-center" *ngFor="let art of articulos">
+    <h4>Encabezado:{{ art.titulo }}</h4>
+    <p>descripcion:{{ art.descripcion }}</p>
+    <p>fecha: {{ art.fecha | date }}</p>
   </div>
 </div>
