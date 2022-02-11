@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 //components
 import { HomeComponent } from '../components/home/home.component';
 import { PerfilComponent } from '../components/perfil/perfil.component';
-
+import { ArticuloDetalleComponent } from '../components/articulo-detalle/articulo-detalle.component';
 
 const routes: Routes = [
   {
@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'perfil',
     component: PerfilComponent,
+  },
+  {
+    path: 'articuloDetalle',
+    component: ArticuloDetalleComponent,
   },
 ];
 

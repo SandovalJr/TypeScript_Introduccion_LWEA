@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { articulo } from 'src/app/models/articulo.model';
+import { ArticulosService } from 'src/app/services/articulos.service';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 
 @Component({
@@ -9,26 +11,38 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
 })
 export class HomeComponent implements OnInit {
   articulos: Array<articulo> = new Array<articulo>();
-  constructor(public usuarioInyectado: UsuariosService) {}
+  constructor(
+    public usuarioInyectado: UsuariosService,
+    private ruta: Router,
+    //llamar servicio de articulo
+  ) {}
 
   ngOnInit(): void {
-    this.articulos.push({
-      titulo: 'java 1',
-      descripcion: 'descripcion 1',
-      fecha: new Date('04/05/2020'),
-      usuario: `${this.usuarioInyectado.usuario.nombre} ${this.usuarioInyectado.usuario.apellido}`,
-    },
-    {
-      titulo: 'java 2',
-      descripcion: 'descripcion 2',
-      fecha: new Date('08/12/2019'),
-      usuario: `${this.usuarioInyectado.usuario.nombre} ${this.usuarioInyectado.usuario.apellido}`,
-    },
-    {
-      titulo: 'java 3',
-      descripcion: 'descripcion 3',
-      fecha: new Date(),
-      usuario: `${this.usuarioInyectado.usuario.nombre} ${this.usuarioInyectado.usuario.apellido}`,
-    });
+    this.articulos.push(
+      {
+        titulo: 'java 1',
+        descripcion: 'descripcion 1',
+        fecha: new Date('04/05/2020'),
+        usuario: `${this.usuarioInyectado.usuario.nombre} ${this.usuarioInyectado.usuario.apellido}`,
+      },
+      {
+        titulo: 'java 2',
+        descripcion: 'descripcion 2',
+        fecha: new Date('08/12/2019'),
+        usuario: `${this.usuarioInyectado.usuario.nombre} ${this.usuarioInyectado.usuario.apellido}`,
+      },
+      {
+        titulo: 'java 3',
+        descripcion: 'descripcion 3',
+        fecha: new Date(),
+        usuario: `${this.usuarioInyectado.usuario.nombre} ${this.usuarioInyectado.usuario.apellido}`,
+      }
+    );
+
+  }
+
+  IrDetalle(art: articulo) {
+    // this.ArticuloInyectado.articulo = art;
+    // this.ruta.navigateByUrl('/articuloDetalle');
   }
 }
