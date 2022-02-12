@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   constructor(
     public usuarioInyectado: UsuariosService,
     private ruta: Router,
-    //llamar servicio de articulo
+    public ArticulosService: ArticulosService
   ) {}
 
   ngOnInit(): void {
@@ -38,9 +38,15 @@ export class HomeComponent implements OnInit {
         usuario: `${this.usuarioInyectado.usuario.nombre} ${this.usuarioInyectado.usuario.apellido}`,
       }
     );
-
+    this.enviarInfoAlServicio();
+    // console.log(this.articulos);
   }
 
+  enviarInfoAlServicio() {
+    this.ArticulosService.obtenerInfo(this.articulos);
+  }
+
+  //aqui yo estaba enviandole los datos del articulo que seleccionara
   IrDetalle(art: articulo) {
     // this.ArticuloInyectado.articulo = art;
     // this.ruta.navigateByUrl('/articuloDetalle');

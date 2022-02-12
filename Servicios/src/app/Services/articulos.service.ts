@@ -5,6 +5,13 @@ import { articulo } from '../models/articulo.model';
   providedIn: 'root',
 })
 export class ArticulosService {
-  articulo: any;
-  constructor(private ArticuloInyectDado: ArticulosService) {}
+  // articulo: articulo = new articulo();
+  // articulo: Array<articulo> =
+  constructor() {}
+
+  obtenerInfo(arrayArticulos: Array<articulo>) {
+    console.log(`informacion service:`);
+    console.log(arrayArticulos);
+  }
+
 }
