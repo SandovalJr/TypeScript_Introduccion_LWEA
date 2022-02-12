@@ -48,7 +48,7 @@ export class HomeComponent implements OnInit {
 
   //aqui yo estaba enviandole los datos del articulo que seleccionara
   IrDetalle(art: articulo) {
-    // this.ArticuloInyectado.articulo = art;
-    // this.ruta.navigateByUrl('/articuloDetalle');
+     this.ArticulosService.articulo(art);
+     this.ruta.navigateByUrl('/articuloDetalle');
   }
 }

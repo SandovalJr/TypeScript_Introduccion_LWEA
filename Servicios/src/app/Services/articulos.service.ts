@@ -14,4 +14,9 @@ export class ArticulosService {
     console.log(arrayArticulos);
   }
 
+  articulo(articulo: articulo) {
+    console.log('informacion recibida');
+    console.log(articulo);
+  }
+  
 }
