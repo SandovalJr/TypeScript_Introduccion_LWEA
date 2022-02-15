@@ -51,4 +51,5 @@ export class HomeComponent implements OnInit {
      this.ArticulosService.articulo(art);
      this.ruta.navigateByUrl('/articuloDetalle');
   }
+  
 }
