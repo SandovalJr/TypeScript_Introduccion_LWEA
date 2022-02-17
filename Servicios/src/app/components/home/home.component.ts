@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
     //   }
     // );
     // console.log(this.articulos);
-    console.log(this.articulosObservable);
+    // console.log(this.articulosObservable);
   }
 
   enviarInfoAlServicio() {

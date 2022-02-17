@@ -3,28 +3,29 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Articulo, articulo } from '../models/articulo.model';
 
+let Art: Articulo;
+
 @Injectable({
   providedIn: 'root',
 })
 export class ArticulosService {
   // articulo: articulo = new articulo();
   // articulo: Array<articulo> =
+
   constructor(private http: HttpClient) {}
 
   //get observable
   leerNoticias(): Observable<Articulo[]> {
-    console.log('llego a leer');
-    
     return this.http.get<Articulo[]>(
       'https://jsonplaceholder.typicode.com/posts'
     );
   }
 
-ArticuloNoticias (articuloRecibido:Articulo){
-console.log(articuloRecibido);
+  ArticuloNoticias(articuloRecibido: Articulo) {
+    Art = articuloRecibido;
+    // console.log(articuloRecibido);
+  }
 
-}
-  
 
   obtenerInfo(arrayArticulos: Array<articulo>) {
     // console.log(`informacion service:`);
