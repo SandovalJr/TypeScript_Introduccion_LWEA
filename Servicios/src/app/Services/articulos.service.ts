@@ -13,18 +13,26 @@ export class ArticulosService {
 
   //get observable
   leerNoticias(): Observable<Articulo[]> {
+    console.log('llego a leer');
+    
     return this.http.get<Articulo[]>(
       'https://jsonplaceholder.typicode.com/posts'
     );
   }
 
+ArticuloNoticias (articuloRecibido:Articulo){
+console.log(articuloRecibido);
+
+}
+  
+
   obtenerInfo(arrayArticulos: Array<articulo>) {
-    console.log(`informacion service:`);
-    console.log(arrayArticulos);
+    // console.log(`informacion service:`);
+    // console.log(arrayArticulos);
   }
 
   articulo(articulo: articulo) {
-    console.log('informacion recibida');
-    console.log(articulo);
+    // console.log('informacion recibida');
+    // console.log(articulo);
   }
 }

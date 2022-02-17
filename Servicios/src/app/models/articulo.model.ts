@@ -18,13 +18,13 @@ export class articulo {
 }
 
 export class Articulo {
-  userID: number;
+  userId: number;
   id: number;
   title: string;
   body: string;
 
-  constructor(userID: number, id: number, title: string, body: string) {
-    this.userID = userID;
+  constructor(userId: number, id: number, title: string, body: string) {
+    this.userId = userId;
     this.id = id;
     this.title = title;
     this.body = body;
