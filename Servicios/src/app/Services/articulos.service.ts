@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { articulo } from '../models/articulo.model';
+import { Observable } from 'rxjs';
+import { Articulo, articulo } from '../models/articulo.model';
 
 @Injectable({
   providedIn: 'root',
@@ -7,7 +9,14 @@ import { articulo } from '../models/articulo.model';
 export class ArticulosService {
   // articulo: articulo = new articulo();
   // articulo: Array<articulo> =
-  constructor() {}
+  constructor(private http: HttpClient) {}
+
+  //get observable
+  leerNoticias(): Observable<Articulo[]> {
+    return this.http.get<Articulo[]>(
+      'https://jsonplaceholder.typicode.com/posts'
+    );
+  }
 
   obtenerInfo(arrayArticulos: Array<articulo>) {
     console.log(`informacion service:`);
@@ -18,5 +27,4 @@ export class ArticulosService {
     console.log('informacion recibida');
     console.log(articulo);
   }
-  
 }

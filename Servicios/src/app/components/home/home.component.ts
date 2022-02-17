@@ -47,7 +47,6 @@ export class HomeComponent implements OnInit {
   }
 
 
-  //vamos en servicios cap
   //aqui yo estaba enviandole los datos del articulo que seleccionara
   IrDetalle(art: articulo) {
      this.ArticulosService.articulo(art);

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 
 //services
@@ -23,7 +23,7 @@ import { ArticuloDetalleComponent } from './components/articulo-detalle/articulo
     PerfilComponent,
     ArticuloDetalleComponent,
   ],
-  imports: [BrowserModule, APP_ROUTES],
+  imports: [BrowserModule, APP_ROUTES, HttpClientModule],
   providers: [UsuariosService, ArticulosService],
   bootstrap: [AppComponent],
 })
