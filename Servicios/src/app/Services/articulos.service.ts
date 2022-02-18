@@ -23,9 +23,10 @@ export class ArticulosService {
 
   ArticuloNoticias(articuloRecibido: Articulo) {
     Art = articuloRecibido;
-    // console.log(articuloRecibido);
+    console.log(Art);
+    //sigue sin retornarme la info
+    return Art;
   }
-
 
   obtenerInfo(arrayArticulos: Array<articulo>) {
     // console.log(`informacion service:`);

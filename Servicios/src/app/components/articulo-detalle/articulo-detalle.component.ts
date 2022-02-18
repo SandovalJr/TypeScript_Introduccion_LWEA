@@ -7,13 +7,12 @@ import { Articulo } from '../../models/articulo.model';
   styleUrls: ['./articulo-detalle.component.sass'],
 })
 export class ArticuloDetalleComponent implements OnInit {
-  articulosObservable: any;
 
   constructor(public articuloInyectado: ArticulosService) {
-    this.articulosObservable = this.articuloInyectado.ArticuloNoticias;
-    console.log(this.articulosObservable);
     
   }
 
   ngOnInit(): void {}
+
+
 }
