@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Articulo, articulo } from '../models/articulo.model';
-
+import { user } from '../models/user.models';
 let Art: Articulo;
 
 @Injectable({
@@ -12,8 +12,14 @@ export class ArticulosService {
   // articulo: articulo = new articulo();
   // articulo: Array<articulo> =
   datoss: any[] = [];
-
+  ruta: string = 'https://jsonplaceholder.typicode.com';
   constructor(private http: HttpClient) {}
+
+  leeruser(id: number): Observable<user> {
+    // console.log(`${this.ruta}/users/${id}`);
+
+    return this.http.get<user>(`${this.ruta}/users/${id}`);
+  }
 
   //get observable
   leerNoticias(): Observable<Articulo[]> {

@@ -8,12 +8,26 @@ import { Articulo } from '../../models/articulo.model';
 })
 export class ArticuloDetalleComponent implements OnInit {
   recibeInfo: any;
+  usuario: any;
+  id: any;
   constructor(public articuloInyectado: ArticulosService) {}
 
   ngOnInit(): void {
     this.recibeInfo = this.articuloInyectado.getinfo1articulo();
-    
-    console.log(this.recibeInfo);
-    
+
+    // console.log(this.recibeInfo.userId);
+    // this.informacionExtraCliente(this.recibeInfo.userId);
+    this.informacionExtraCliente();
+  }
+
+  informacionExtraCliente() {
+    // console.log(this.recibeInfo);
+    // console.log(this.recibeInfo.id);
+    this.id = this.recibeInfo.id;
+    // console.log(this.id);
+
+    this.articuloInyectado.leeruser(this.id).subscribe((usuarioDesdeAPI) => {
+      this.usuario = usuarioDesdeAPI;
+    });
   }
 }
