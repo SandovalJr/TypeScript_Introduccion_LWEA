@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Articulo, articulo } from 'src/app/models/articulo.model';
 import { ArticulosService } from 'src/app/services/articulos.service';
@@ -10,6 +10,8 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
   styleUrls: ['./home.component.sass'],
 })
 export class HomeComponent implements OnInit {
+
+  
   articulos: Array<articulo> = new Array<articulo>();
   articulosObservable: Array<Articulo> = new Array<Articulo>();
 

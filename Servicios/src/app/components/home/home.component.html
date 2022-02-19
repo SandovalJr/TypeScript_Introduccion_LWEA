@@ -7,7 +7,7 @@
   </div>
 </div> -->
 <div class="container">
-  <div class="articulo text-center" *ngFor="let artO of articulosObservable">
+  <div class="articulo text-center"  *ngFor="let artO of articulosObservable">
     <h4 (click)="IrDetalleObservable(artO)">User ID:{{ artO.userId }}</h4>
     <p>ID:{{ artO.id }}</p>
     <p>Titulo: {{ artO.title }}</p>

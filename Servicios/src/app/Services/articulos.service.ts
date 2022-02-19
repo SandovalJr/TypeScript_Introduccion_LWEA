@@ -11,6 +11,7 @@ let Art: Articulo;
 export class ArticulosService {
   // articulo: articulo = new articulo();
   // articulo: Array<articulo> =
+  datoss:any[] = [];
 
   constructor(private http: HttpClient) {}
 
@@ -22,10 +23,15 @@ export class ArticulosService {
   }
 
   ArticuloNoticias(articuloRecibido: Articulo) {
-    Art = articuloRecibido;
-    console.log(Art);
+    this.datoss.push(articuloRecibido)
+    console.log(this.datoss);
     //sigue sin retornarme la info
-    return Art;
+  }
+
+  getinfo1articulo() {
+    console.log('llego get');
+    // console.log(Art);
+    return  this.datoss;
   }
 
   obtenerInfo(arrayArticulos: Array<articulo>) {
