@@ -12,6 +12,7 @@ export class ArticuloDetalleComponent implements OnInit {
 
   ngOnInit(): void {
     this.recibeInfo = this.articuloInyectado.getinfo1articulo();
+    
     console.log(this.recibeInfo);
     
   }
