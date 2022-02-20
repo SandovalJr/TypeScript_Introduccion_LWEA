@@ -10,6 +10,7 @@ export class ArticuloDetalleComponent implements OnInit {
   recibeInfo: any;
   usuario: any;
   id: any;
+
   constructor(public articuloInyectado: ArticulosService) {}
 
   ngOnInit(): void {
@@ -17,8 +18,11 @@ export class ArticuloDetalleComponent implements OnInit {
 
     this.id = this.recibeInfo.id;
 
-    this.articuloInyectado.leeruser(this.id).subscribe((usuarioDesdeAPI) => {
-      this.usuario = usuarioDesdeAPI;
-    });
+    this.articuloInyectado
+      .leeruser(this.recibeInfo.id)
+      .subscribe((usuarioDesdeAPI) => {
+        this.usuario = usuarioDesdeAPI;
+      });
+      
   }
 }
