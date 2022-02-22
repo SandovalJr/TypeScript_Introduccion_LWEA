@@ -17,7 +17,6 @@ export class ArticulosService {
 
   leeruser(id: number): Observable<user> {
     // console.log(`${this.ruta}/users/${id}`);
-
     return this.http.get<user>(`${this.ruta}/users/${id}`);
   }
 
