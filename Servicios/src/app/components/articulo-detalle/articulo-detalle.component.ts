@@ -13,15 +13,19 @@ export class ArticuloDetalleComponent implements OnInit {
 
   constructor(public articuloInyectado: ArticulosService) {
     this.recibeInfo = this.articuloInyectado.getinfo1articulo();
+    this.id = this.recibeInfo.id;
   }
 
-  ngOnInit(): void {
-    this.id = this.recibeInfo.id;
-
+  ngAfterContentInit() {
     this.articuloInyectado
       .leeruser(this.recibeInfo.id)
       .subscribe((usuarioDesdeAPI) => {
+        // if (usuarioDesdeAPI != undefined) {
         this.usuario = usuarioDesdeAPI;
+        // console.log(usuarioDesdeAPI);
+        // }
       });
   }
+
+  ngOnInit(): void {}
 }

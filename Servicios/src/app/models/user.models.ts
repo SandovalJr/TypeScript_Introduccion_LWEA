@@ -1,12 +1,12 @@
-import { address } from './address.models';
+import { Address } from './address.models';
 
 export class user {
   id: number;
   name: string;
   email: string;
-  adress: address;
-  
-  constructor(id: number, name: string, email: string, adress: address) {
+  adress: Address;
+
+  constructor(id: number, name: string, email: string, adress: Address) {
     this.id = id;
     this.name = name;
     this.email = email;
